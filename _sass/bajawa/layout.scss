@@ -1,0 +1,323 @@
+/** Main Container or Wrapper **/
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $base-bg-color;
+}
+
+hr {
+  border-top: none;
+  border-bottom: 2px solid lighten($light-grey, 7%);
+  width: 100%;
+  margin: $small-spacing 0;
+}
+
+/** CSS MAIN **/
+.wrapper-all {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+
+  /** Header and Navbar **/
+  .site-header {
+    border-bottom: 1px solid lighten($light-berry, 20%);
+    margin: 0 auto 0 auto;
+    height: 100px;
+
+    .navbar {
+      height: 100px;
+      max-width: $maxwidth;
+      margin: 0 auto 0 auto;
+
+      .logo-container {
+        float: left;
+        padding: $base-spacing;
+        margin: 0 auto 0 auto;
+
+        .logo-left {
+          letter-spacing: 2px;
+          cursor: pointer;
+          line-height: 14px;
+        }
+      }
+
+      .nav-container {
+        padding: $base-spacing;
+        margin: 0.5em auto 0.75em auto;
+        float: right;
+
+        .navbar-right {
+          overflow: hidden;
+
+          a {
+            float: left;
+            display: block;
+            margin: 0.3em 0 0 0;
+            padding: 0;
+            pointer-events: all;
+            cursor: pointer;
+            text-align: center;
+          }
+          a:link {
+            color: $dark-berry;
+          }
+          a:visited {
+            color: $dark-berry;
+          }
+          a:hover {
+            color: $light-berry;
+          }
+          a:active {
+            color: $light-berry;
+          }
+          li {
+            display: inline-block;
+            padding: 0.6em;
+          }
+          .icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /** Front Page Layout **/
+    /** 1. Hero Image **/
+  .main-content-front {
+    padding: 0 0 80px 0;
+    margin: 0;
+    height: calc(100% - 100px - 100px); //total height minus header minus footer
+
+
+    .hero-wrapper {
+      padding: 0;
+      margin: 0 ;
+      height: 50%;
+      background-color: $light-grey;
+
+      .hero-wrapper-container {
+        padding: 0;
+        margin: 0;
+
+        .hero-img {
+          /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/heroimg.jpg");
+          height: 400px; /* Set a specific height */
+          background-color: $light-grey;
+          display: block;
+          /* Position and center the image to scale nicely on all screens */
+          position: relative;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .hero-text {
+          text-align: center;
+          position: absolute;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        /* Place text in the middle of the image */
+        a.button {
+          font-size: $base-font-size;
+          border: 2px solid $white;
+          border-color: $white;
+          outline: 0;
+          display: inline-block;
+          margin-top: 5px;
+          padding: 10px 25px;
+          color: $white;
+          background-color: transparent;
+          text-align: center;
+          cursor: pointer;
+        }
+
+        a.button:hover {
+          background-color: $white;
+          color: $black;
+        }
+      }
+    }
+
+    /** 2. Recent Post **/
+    .recent-post-wrapper {
+      padding: 0;
+      margin: 0;
+
+      .recent-post-container {
+        margin: $base-spacing auto $base-spacing auto;
+        max-width: $maxwidth;
+
+        .section-title {
+          padding: 0;
+          margin: 1em*2 auto 1em auto;
+        }
+        .post-entry-grid {
+          padding-top: $base-spacing;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-gap: 2em;
+
+          .entry-flex {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: $base-spacing/2;
+          }
+        }
+        .button-post {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+
+          a.button {
+            font-size: $base-font-size;
+            border: 2px solid $dark-berry;
+            border-color: $dark-berry;
+            outline: 0;
+            display: inline-block;
+            margin: 5px auto 5px auto;
+            padding: 10px 25px;
+            color: $dark-berry;
+            background-color: transparent;
+            text-align: center;
+            cursor: pointer;
+          }
+
+          a.button:hover {
+            background-color: $dark-berry;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+/*** Post Layout ***/
+  .post-wrapper {
+    max-width: $maxwidth;
+    margin: $base-spacing auto $base-spacing auto;
+    padding: $base-spacing;
+    height: calc(100% - 100px - 100px); //total height minus header and footer
+
+    .post-header {
+      height: 80px;
+      margin: $base-spacing 0 $base-spacing 0;
+    }
+
+    .post-content {
+      margin: $base-spacing 0 $base-spacing 0;
+      color: $dark-grey;
+    }
+
+    .post-content hr {
+      display: block;
+      margin: 1em auto 1em auto;
+      border-style: double;
+      border-width: 2px;
+      color: $dark-berry;
+    }
+  }
+
+/*** Page Layout ***/
+  .page-container {
+    height: calc(100% - 100px - 100px); //total height minus header minus footer
+
+    .page-wrapper {
+      max-width: $maxwidth;
+      margin-left: auto;
+      margin-right: auto;
+      padding: $base-spacing;
+
+      .page-header {
+        height: 80px;
+        margin: 2em 0 2em 0;
+      }
+
+      .page-content {
+        margin: $base-spacing 0 $base-spacing 0;
+        color: $dark-grey;
+
+        //LUNR Search settings under page content
+        .form-control {
+            border: 2px solid $medium-grey;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 20px;
+            font-style: $base-font-size;
+            font-size: 14px;
+          }
+        #lunrsearchresults {
+          padding-top: 0.2rem;
+        }
+        .lunrsearchresult {padding-bottom: 1rem;}
+        .lunrsearchresult .title {color: $dark-berry; font-family: $alternate-font-type;}
+        .lunrsearchresult .url {color: $medium-grey;}
+        .lunrsearchresult .url a:hover {color: $light-berry;}
+        .lunrsearchresult a {display: block; color: $dark-grey;}
+        .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+        .lunrsearchresult a:hover .title {text-decoration: underline;}
+      }
+
+      /** Only for Pagination and Blog Page only **/
+      .blogpost-title li {
+        list-style: none;
+      }
+      .pagination a, .pagination span {
+        padding: 7px 18px;
+        border: 1px solid #eee;
+        margin-left: -2px;
+        margin-right: -2px;
+        background-color: #ffffff;
+        display: inline-block;
+        font-size: 12px;
+      }
+      .pagination a {
+        &:hover {
+          background-color: #f1f1f1;
+          color: #333;
+        }
+      }
+      .pagination {
+        text-align: center;
+        margin-top: 2.5em;
+      }
+    }
+  }
+
+/** Footer **/
+  .site-footer {
+    border-top: 1px solid $light-grey;
+    width: 100%;
+    height: 100px;
+    position: relative;
+
+    .footer-container {
+      padding: $base-spacing;
+      margin: auto;
+      height: 100px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
