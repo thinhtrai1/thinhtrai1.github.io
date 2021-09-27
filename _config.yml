@@ -1,0 +1,17 @@
+url: https://minhchaublog.github.io
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+     path: ""
+     type: "pages"
+   values:
+     permalink: "/blog/"
