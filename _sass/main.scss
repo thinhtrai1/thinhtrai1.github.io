@@ -690,3 +690,21 @@ body {
 .content-md {
 	padding: 3rem 0;
 }
+
+
+
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: var(--grey-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-theme); 
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-theme-d); 
+}
