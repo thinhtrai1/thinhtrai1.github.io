@@ -1,4 +1,5 @@
 url: https://minhchaublog.github.io
+baseurl: /blog/
 
 defaults:
   - scope:
