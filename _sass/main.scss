@@ -90,11 +90,11 @@
 }
 ::-webkit-scrollbar-track {
   border-radius: 1rem;
-  color: red;
+  background: red;
   background: var(--grey-light);
 }
 ::-webkit-scrollbar-thumb {
-	color: red;
+	background: red;
   background: var(--color-theme); 
   border-radius: 1rem;
 }
