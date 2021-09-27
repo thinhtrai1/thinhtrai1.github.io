@@ -40,7 +40,7 @@ permalink: /
 							{% endif %}
 						{% endfor %}
 					</a>
-					<div class="date-blogcard"><i class="fas fa-calendar-alt"></i> {{site.posts[0].date}}</div>
+					<div class="date-blogcard"><i class="fas fa-calendar-alt"></i> {{site.posts[0].date|date:"%-d/%m/%Y"}}</div>
 					<a href="{{site.posts[0].url}}" class="heading-blogcard">{{site.posts[0].title}}</a>
 					<p class="brief-blogcard para">{{site.posts[0].brief}}</p>
 				</div>
