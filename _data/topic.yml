@@ -1,0 +1,19 @@
+- name: all
+  text: Tất cả
+  icon:
+  cover: "all.jpg"
+- name: dev
+  text: Lập trình
+  color: yellow
+  icon: <i class="fas fa-code"></i>
+  cover: "dev.jpg"
+- name: life
+  text: Cuộc sống
+  color: blue
+  icon: <i class="fas fa-chart-pie"></i>
+  cover: "life.jpg"
+- name: other
+  text: Linh tinh
+  color: orange
+  icon: <i class="fas fa-chart-pie"></i>
+  cover: "other.jpg"

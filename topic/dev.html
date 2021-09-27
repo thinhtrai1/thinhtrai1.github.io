@@ -1,0 +1,39 @@
+---
+layout: default
+title: "Minh Châu Blog | Blog"
+permalink: /blog/dev/
+topic: dev
+---
+{% capture cover %}{% for topic in site.data.topic %}{% if topic.name == page.topic %}{{topic.cover}}{% endif %}{% endfor %}{% endcapture %}
+<style type="text/css">
+	.main-banner-blogs {
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+		url("{{site.url}}/assets/img/covertopic/{{cover}}");
+	}
+</style>
+
+<section class="main-banner main-banner-blogs" >
+	<div class="main-banner-h">Blog - Lập trình</div>
+</section>
+
+<section class="section-blog padding-body">
+	{% include searchbar.html default=page.topic %}
+	<div class="section-blog-layout2">
+		<div class="left-group-blog-main">
+			<div class="grid-blogcard">
+				{% for post in site.posts %}
+				{% if post.topic == page.topic %}
+					{% capture post_cover %}{{site.url}}/assets/img/coverblog/{{post.cover}}{% endcapture %}
+					{% capture post_date %} {{post.date|date:"%-d/%m/%Y"}}{% endcapture %}
+
+					{% include blogcard.html url=post.url cover=post_cover topic=post.topic date=post_date heading=post.title brief=post.brief %}
+				{% endif %}
+				{% endfor %}
+
+			</div>
+		</div>
+		<div class="right-groups">
+			{% include topicgroup.html %}
+		</div>
+	</div>	
+</section>
