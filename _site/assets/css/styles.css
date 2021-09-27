@@ -32,9 +32,9 @@
 
 ::-webkit-scrollbar { width: 1rem; }
 
-::-webkit-scrollbar-track { border-radius: 1rem; background: red; background: var(--grey-light); }
+::-webkit-scrollbar-track { border-radius: 1rem; background: var(--grey-light); }
 
-::-webkit-scrollbar-thumb { background: red; background: var(--color-theme); border-radius: 1rem; }
+::-webkit-scrollbar-thumb { background: var(--color-theme); border-radius: 1rem; }
 
 ::-webkit-scrollbar-thumb:hover { background: var(--color-theme-d); }
 
@@ -222,5 +222,13 @@ body { padding: 0; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font
 .content-blog-heading { display: block; margin: 0 2rem 2rem 0; font-size: 3.4rem; font-weight: 500; line-height: 4rem; color: var(--black); }
 
 .content-md { padding: 3rem 0; }
+
+::-webkit-scrollbar { width: 1rem; }
+
+::-webkit-scrollbar-track { border-radius: 1rem; background: var(--grey-light); }
+
+::-webkit-scrollbar-thumb { background: var(--color-theme); border-radius: 1rem; }
+
+::-webkit-scrollbar-thumb:hover { background: var(--color-theme-d); }
 
 /*# sourceMappingURL=styles.css.map */
