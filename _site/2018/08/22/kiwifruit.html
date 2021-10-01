@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="https://minhchaublog.github.io/assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/styles.css">
 	<script src="https://kit.fontawesome.com/6aa8c5054e.js" crossorigin="anonymous"></script>
 	<title>Blog test Kiwifruit</title>
 </head>
@@ -16,25 +17,33 @@
 	<a href="/" class="logo">
 		<svg class="logo-img" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 634.6"><defs><style>.cls-1{font-size:387.73px;font-family:SegoeUI-Semibold, Segoe UI;}.cls-2{font-weight:700;}.cls-3{font-family:SegoeUI-Light, Segoe UI;}.cls-4{fill:none;}</style></defs><polygon points="40.81 144.59 143.12 567.3 40.81 567.3 40.81 144.59"/><polygon points="264.13 67.3 161.82 490.01 59.52 67.3 264.13 67.3"/><polygon points="282.83 144.59 282.83 567.3 180.53 567.3 282.83 144.59"/><polygon points="536.41 317.3 319.27 541.61 319.27 92.99 536.41 317.3"/><polygon points="344.16 567.3 561.29 343 561.29 567.3 344.16 567.3"/><polygon points="561.29 67.3 561.29 291.6 344.16 67.3 561.29 67.3"/><text class="cls-1" transform="translate(672.41 450.15) scale(0.98 1)"><tspan class="cls-2">MC</tspan><tspan class="cls-3" x="599.19" y="0">Blog</tspan></text><rect class="cls-4" width="2000" height="634.6"/></svg>
 	</a>
+	<input type="checkbox" id="toggle-header"/>
+    <label class="toggle-header-lable" for="toggle-header"><i class="fas fa-bars fa-2x"></i><i class="fas fa-times fa-2x"></i></label>
 	<div class="nav">
 		<ul class="menu">
 			<li class="menu-item"><a href="/" class="menu-link">Trang chủ</a></li>
 			<li class="menu-item">
-				<a href="https://minhchaublog.github.io/blog" class="menu-link">Blog <i class="fas fa-caret-down"></i>	</a>
+				<div class="group-link-sub">
+					<a href="http://localhost:4000/blog" class="menu-link">Blog <i class="fas fa-caret-down"></i>	</a>
+					<div class="toggle-submenu">
+						<i class="fas fa-chevron-circle-down"></i>
+					</div>
+				</div>
+				
 				<ul class="sub-menu">
 					
 					
 					
 					
-					<li class="sub-menu-item"><a href="https://minhchaublog.github.io/blog/dev" class="menu-link" name="dev">Lập trình</a></li>
+					<li class="sub-menu-item"><a href="http://localhost:4000/blog/dev" class="menu-link" name="dev">Lập trình</a></li>
 					
 					
 					
-					<li class="sub-menu-item"><a href="https://minhchaublog.github.io/blog/life" class="menu-link" name="life">Cuộc sống</a></li>
+					<li class="sub-menu-item"><a href="http://localhost:4000/blog/life" class="menu-link" name="life">Cuộc sống</a></li>
 					
 					
 					
-					<li class="sub-menu-item"><a href="https://minhchaublog.github.io/blog/other" class="menu-link" name="other">Linh tinh</a></li>
+					<li class="sub-menu-item"><a href="http://localhost:4000/blog/other" class="menu-link" name="other">Linh tinh</a></li>
 					
 					
 				</ul>
@@ -42,6 +51,26 @@
 			<li class="menu-item"><a href="/" class="menu-link">Game</a></li>
 			<li class="menu-item"><a href="/" class="menu-link">Tiện ích</a></li>
 		</ul>
+		<div class="contact-responsive">
+			<hr style="border-top: .2rem solid var(--color-theme);">
+			<style type="text/css">
+	.contact-icon-gm {
+		background: var(--red);
+	}
+	.contact-icon-fb {
+		background:  var(--blue);
+	}
+	.contact-icon-gh {
+		background:  var(--black);
+	}
+</style>
+
+<div class="list-contact-icon">
+	<a href="" class="contact-icon contact-icon-gm"><i class="fas fa-envelope fa-lg"></i></a>
+	<a href="https://www.facebook.com/buitongminhchau" target="_blank" class="contact-icon contact-icon-fb"><i class="fab fa-facebook-f fa-lg"></i></a>
+	<a href="https://github.com/buitongminhchau01032002" target="_blank" class="contact-icon contact-icon-gh"><i class="fab fa-github-alt fa-lg"></i></a>
+</div>
+		</div>
 	</div>
 	<div class="right-header">
 		<style type="text/css">
@@ -62,6 +91,22 @@
 	<a href="https://github.com/buitongminhchau01032002" target="_blank" class="contact-icon contact-icon-gh"><i class="fab fa-github-alt fa-lg"></i></a>
 </div>
 	</div>
+	<script type="text/javascript">
+		var toggleSubElements = document.querySelectorAll(".toggle-submenu > i");
+		toggleSubElements.forEach(function (toggle) {
+			toggle.addEventListener("click", function(e){sub(e);});
+		});
+		function sub(e) {
+			/// NEED FIX 
+
+			let subElement = e.target.parentElement.parentElement.parentElement.querySelector(".sub-menu");
+			if (subElement.style.display != "flex") {
+				subElement.style.display = "flex";
+			} else {
+				subElement.style.display = "none";
+			}
+		}
+	</script>
 </header>
 	<section class="main-banner main-banner-blogs">
 	<div class="main-banner-h">Chúc bạn đọc vui vẻ</div>
@@ -98,7 +143,7 @@
 				<h2 class="content-blog-heading">Blog test Kiwifruit</h2>
 				<div class="ratio-img" >
 					<div class="cover-single-blog-img">
-						<img src="https://minhchaublog.github.io/assets/img/coverblog/kiwifruit.jpg" class="img-fit">
+						<img src="http://localhost:4000/assets/img/coverblog/kiwifruit.jpg" class="img-fit">
 					</div>
 				</div>
 				<div class="content-md markdown-body">
@@ -124,7 +169,7 @@ texture, with a sweet and unique flavor.</p>
 		
 		
 		<li class="topic-item">
-			<a href="https://minhchaublog.github.io/blog/dev" class="topic-link topic-link0yellow" name="dev">
+			<a href="http://localhost:4000/blog/dev" class="topic-link topic-link0yellow" name="dev">
 				<div class="topic-link-icon"><i class="fas fa-code"></i></div>
 				<div class="topic-link-text">Lập trình</div>
 			</a>
@@ -133,7 +178,7 @@ texture, with a sweet and unique flavor.</p>
 		
 		
 		<li class="topic-item">
-			<a href="https://minhchaublog.github.io/blog/life" class="topic-link topic-link0blue" name="life">
+			<a href="http://localhost:4000/blog/life" class="topic-link topic-link0blue" name="life">
 				<div class="topic-link-icon"><i class="fas fa-chart-pie"></i></div>
 				<div class="topic-link-text">Cuộc sống</div>
 			</a>
@@ -142,7 +187,7 @@ texture, with a sweet and unique flavor.</p>
 		
 		
 		<li class="topic-item">
-			<a href="https://minhchaublog.github.io/blog/other" class="topic-link topic-link0orange" name="other">
+			<a href="http://localhost:4000/blog/other" class="topic-link topic-link0orange" name="other">
 				<div class="topic-link-icon"><i class="fas fa-chart-pie"></i></div>
 				<div class="topic-link-text">Linh tinh</div>
 			</a>
@@ -165,7 +210,7 @@ texture, with a sweet and unique flavor.</p>
 		<div class="footer-heading">Truy cập nhanh</div>
 		<div class="footer-useful-link-group">
 			<a href="/" class="footer-useful-link-link">Trang chủ</a>
-			<a href="https://minhchaublog.github.io/blog/" class="footer-useful-link-link">Blog</a>
+			<a href="http://localhost:4000/blog/" class="footer-useful-link-link">Blog</a>
 		</div>
 	</div>
 	<div class="footer-contact">
@@ -192,7 +237,7 @@ texture, with a sweet and unique flavor.</p>
 	</div>
 </footer>
 	<a href="#" class="m-btn btn-to-top"><i class="fas fa-angle-up fa-2x"></i></a>
-	<script src="https://minhchaublog.github.io/assets/js/main.js"></script>
+	<script src="http://localhost:4000/assets/js/main.js"></script>
 	<script type="text/javascript">
 		
 	</script>
