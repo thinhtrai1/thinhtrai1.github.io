@@ -724,16 +724,6 @@ body {
 		padding-left: 5rem !important;
 		padding-right: 5rem !important;
 	}
-}
-
-@media (max-width: 767px){
-	html {
-		font-size: 50%;
-	}
-	.padding-body {
-		padding-left: 3rem !important;
-		padding-right: 3rem !important;
-	}
 	.toggle-header-lable {
 		display: flex;
 	}
@@ -778,6 +768,16 @@ body {
 		position: initial;
 		border-radius: .5rem;
 		transition: .3s;
+	}
+}
+
+@media (max-width: 767px){
+	html {
+		font-size: 50%;
+	}
+	.padding-body {
+		padding-left: 3rem !important;
+		padding-right: 3rem !important;
 	}
 }
 
