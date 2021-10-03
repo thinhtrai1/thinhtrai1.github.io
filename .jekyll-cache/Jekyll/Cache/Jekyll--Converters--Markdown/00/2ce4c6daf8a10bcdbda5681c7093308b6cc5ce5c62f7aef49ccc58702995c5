@@ -1,4 +1,4 @@
-I"�C<p>Chào mọi người! Đây là bài hướng dẫn đầu tiên trong chuỗi bài hướng dẫn <strong>làm game với pygame</strong>. Ở đây, chúng ta sẽ tìm hiểu cách cài đặt <strong>pygame</strong> và tạo một cửa sổ game đầu tiên.</p>
+I"�C<p>Chào mọi người! Đây là bài hướng dẫn đầu tiên trong chuỗi bài hướng dẫn <strong>làm game với pygame</strong>. Ở đây, chúng ta sẽ tìm hiểu cách cài đặt <strong>pygame</strong> và tạo một cửa sổ game đầu tiên.</p>
 
 <p>Trước khi đọc bài hướng dẫn này, các bạn cần có một số kiến thức cơ bản về <strong>python</strong> nhé! Những gì mình hướng dẫn là những thứ cơ bản, nên còn nhiều kiến thức mình chưa đề cập đến, các bạn nên chủ động tìm hiểu thêm trên Google, Youtube nhé! Các bạn có thể vào <a href="https://www.pygame.org/docs/">đây</a> nếu muốn tìm kiếm các lệnh, hàm… trong pygame.</p>
 
@@ -53,7 +53,7 @@ Nếu muốn cập nhật phiên bản mới nhất, các bạn có thể gõ l�
 <p><br />
 Sau khi chạy đoạn code, bạn sẽ có được kết quả như hình. Nếu có lỗi thì bạn kiểm tra xem có cài pygame thành công chưa nha!</p>
 
-<p><img src="http://localhost:4000/assets/img/pygame_1/helloworld.png" alt="Kết quả chạy đoạn code trên" />
+<p><img src="https://minhchaublog.github.io/assets/img/pygame_1/helloworld.png" alt="Kết quả chạy đoạn code trên" />
 <br /><br /></p>
 
 <p>Giờ chúng ta tìm hiểu những dòng code thôi nào!</p>
@@ -106,7 +106,7 @@ Sau khi chạy đoạn code, bạn sẽ có được kết quả như hình. N�
 
 <p>Xem hình sau để dễ hình dung nha các bạn</p>
 
-<p><img src="http://localhost:4000/assets/img/pygame_1/animchar.png" alt="Chuyển động của nhân vật" />
+<p><img src="https://minhchaublog.github.io/assets/img/pygame_1/animchar.png" alt="Chuyển động của nhân vật" />
 <br />
 <br /></p>
 
@@ -133,7 +133,7 @@ Nhìn có vẻ hơi rối, nhưng hãy bình tĩnh, phân tích từ từ nào. 
 
 <p>Vậy là chúng ta đã tìm hiểu được cơ bản về vòng lặp game. <strong>Tóm lại</strong>, trong vòng lặp game có 3 việc chính: vẽ, bắt sự kiện, thay đổi đối tượng.</p>
 
-<p><img src="http://localhost:4000/assets/img/pygame_1/gameloop.png" alt="Vòng lặp game" /></p>
+<p><img src="https://minhchaublog.github.io/assets/img/pygame_1/gameloop.png" alt="Vòng lặp game" /></p>
 
 <blockquote>
   <p>Những cái này có thể hơi khó hiểu với các bạn lần đầu học lập trình game. Đừng quá lo lắng, các bạn có thể đọc lại nhiều lần, tìm hiểu thêm ở nhiều nguồn khác nhau, hoặc làm nhiều rồi sẽ quen thôi!</p>
@@ -159,7 +159,7 @@ Nhìn có vẻ hơi rối, nhưng hãy bình tĩnh, phân tích từ từ nào. 
 <p><br />
 Đây là kết quả:</p>
 
-<p><img src="http://localhost:4000/assets/img/pygame_1/draw.png" alt="Vẽ vài thứ" /></p>
+<p><img src="https://minhchaublog.github.io/assets/img/pygame_1/draw.png" alt="Vẽ vài thứ" /></p>
 
 <p>Vậy là chúng ta đã vẽ được một hình chữ nhật đỏ trên nền trắng rồi. Còn về phần những đoạn code đó thì mình sẽ giải thích ở bài hướng dẫn tiếp theo.
 <br />
