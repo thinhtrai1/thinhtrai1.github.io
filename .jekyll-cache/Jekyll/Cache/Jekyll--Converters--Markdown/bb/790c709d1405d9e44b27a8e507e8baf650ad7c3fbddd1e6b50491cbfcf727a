@@ -1,0 +1,178 @@
+I"�C<p>Chào mọi người! Đây là bài hướng dẫn đầu tiên trong chuỗi bài hướng dẫn <strong>làm game với pygame</strong>. Ở đây, chúng ta sẽ tìm hiểu cách cài đặt <strong>pygame</strong> và tạo một cửa sổ game đầu tiên.</p>
+
+<p>Trước khi đọc bài hướng dẫn này, các bạn cần có một số kiến thức cơ bản về <strong>python</strong> nhé! Những gì mình hướng dẫn là những thứ cơ bản, nên còn nhiều kiến thức mình chưa đề cập đến, các bạn nên chủ động tìm hiểu thêm trên Google, Youtube nhé! Các bạn có thể vào <a href="https://www.pygame.org/docs/">đây</a> nếu muốn tìm kiếm các lệnh, hàm… trong pygame.</p>
+
+<blockquote>
+  <p>Mình có một điều muốn nhắc với các bạn. Trong bài hướng dẫn có những đoạn code, nếu các bạn còn đang tìm hiểu thì nên tự gõ những đoạn code đó cho quen, hạn chế copy paste nhé!</p>
+</blockquote>
+
+<p>Nào! Chúng ta cùng bắt đầu thôi!
+<br />
+<br /></p>
+<h2 id="cài-đặt-pygame">Cài đặt pygame</h2>
+
+<p>Để cài đặt pygame, các bạn có thể dùng <code class="language-plaintext highlighter-rouge">pip</code>.</p>
+
+<p>Hãy gõ lệnh này trên terminal để cài đặt pygame.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pygame
+</code></pre></div></div>
+<p>Đợi một tí, pygame sẽ tự động được cài.</p>
+
+<p>Để kiểm tra việc cài đặt, các bạn có thể thử <code class="language-plaintext highlighter-rouge">import</code> thư viện <code class="language-plaintext highlighter-rouge">pygame</code>. Nếu kết quả hiện ra như sau thì bạn đã cài pygame thành công.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; import pygame
+pygame 2.0.1 (SDL 2.0.14, python 3.7.3)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+</code></pre></div></div>
+
+<p><br />
+Nếu muốn cập nhật phiên bản mới nhất, các bạn có thể gõ lệnh này:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pygame --upgrade
+</code></pre></div></div>
+<p><br /></p>
+
+<h2 id="tạo-của-sổ-game-đầu-tiên">Tạo của sổ game đầu tiên</h2>
+
+<p>Sau khi cài xong pygame, chúng ta cùng tạo tìm hiểu về pygame ngay thôi.</p>
+
+<p>Các bạn hãy tạo một file <code class="language-plaintext highlighter-rouge">.py</code>, gõ đoạn code này và chạy thử nhé. Mình sẽ giải thích những dòng code đó sau:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pygame</span><span class="p">,</span> <span class="n">sys</span>
+<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">pygame</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
+
+<span class="n">DISPLAYSURF</span> <span class="o">=</span> <span class="n">pygame</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">400</span><span class="p">,</span> <span class="mi">250</span><span class="p">))</span>
+<span class="n">pygame</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s">'Hello world!'</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">pygame</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>
+            <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">()</span>
+</code></pre></div></div>
+<p><br />
+Sau khi chạy đoạn code, bạn sẽ có được kết quả như hình. Nếu có lỗi thì bạn kiểm tra xem có cài pygame thành công chưa nha!</p>
+
+<p><img src="http://localhost:4000/assets/img/pygame_1/helloworld.png" alt="Kết quả chạy đoạn code trên" />
+<br /><br /></p>
+
+<p>Giờ chúng ta tìm hiểu những dòng code thôi nào!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pygame</span><span class="p">,</span> <span class="n">sys</span>
+<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">pygame</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Các dòng trên dùng để khai báo, sử dụng các hàm của thư viện pygame. Các bạn không cần quá quan tâm về nó, chỉ cần nhớ thêm những dòng này khi dùng pygame là được.
+<br /><br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DISPLAYSURF</span> <span class="o">=</span> <span class="n">pygame</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">400</span><span class="p">,</span> <span class="mi">250</span><span class="p">))</span>
+</code></pre></div></div>
+<p>Dòng này dùng để tạo một cửa sổ game. Biến <code class="language-plaintext highlighter-rouge">DISPLAYSURF</code> đại diện cho cửa sổ game của chúng ta, sau này muốn thao tác gì (vẽ hình, xoá hình,…) thì sẽ thông qua biến này. Biến <code class="language-plaintext highlighter-rouge">DISPLAYSURF</code> là một biến thuộc kiểu <code class="language-plaintext highlighter-rouge">Surface</code>, về phần Surface mình sẽ nói sau, hiện tại cứ hiểu <code class="language-plaintext highlighter-rouge">DISPLAYSURF</code> là cái khung màu đen kia là được. Hàm <code class="language-plaintext highlighter-rouge">pygame.display.set_mode((400, 300))</code> dùng để tạo cửa sổ game, hay số trong tuple <code class="language-plaintext highlighter-rouge">(400, 300)</code> là kích thước (chiều rộng, chiều cao) của cửa sổ, đơn vị là <strong>pixel</strong>.
+<br /><br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pygame</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s">'Hello world!'</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Dòng này đơn giản chỉ để tạo cái chữ trên tiêu đề của cửa sổ game.
+<br /><br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">pygame</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>
+            <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Những dòng này khá phức tạp, mình sẽ nói ở phần tiếp theo (ngay sau đây thôi).</p>
+
+<blockquote>
+  <p>Được rồi! Các bạn có thể thay đổi chiều rộng, chiều cao, tiêu đề của cửa sổ game và chạy thử nha!</p>
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="vòng-lặp-game">Vòng lặp game</h2>
+
+<p>Trong phần này, chúng ta sẽ tìm hiểu về vòng lặp game, sự kiện và làm rõ đoạn code còn dang dở ở phần trước.</p>
+
+<h3 id="chuyển-động-trong-game-được-tạo-ra-như-thế-nào">Chuyển động trong game được tạo ra như thế nào?</h3>
+
+<p>Nói đơn giản thì chuyển động trong game cũng giống như trong phim hoạt hình. Tức là để tạo ra một chuyển động, người ta phải “phát” liên tục các hình ảnh. Nếu tốc độ phát này đủ nhanh, mắt người sẽ cảm nhận được đó là một chuyển động nhờ vào hiện tượng lưu ảnh ở mắt. À thôi, hơi lạc đề rồi, quay lại nào! Muốn tạo ra một chuyển động trong game, ta cần phải liên tục “vẽ” các hình ảnh lên cửa sổ game. Muốn làm được việc đó tất nhiên cần một vòng lặp, đó chính là cái <code class="language-plaintext highlighter-rouge">while</code> trong đoạn code trên, vòng lặp này gọi là <strong>vòng lặp game</strong>.</p>
+
+<p>Giả sử chúng ta muốn một nhân vật di chuyển sang phải, thì phải làm thế nào:</p>
+<ul>
+  <li>Bước 1: Xoá những thứ đang có trên màn hình. Vẽ nhân vật lên màn hình</li>
+  <li>Bước 2: Điều chỉnh vị trí nhân vật sang phải “một tí” (viết code gì đó để xử lý)</li>
+  <li>Bước 3: Quay lại bước</li>
+</ul>
+
+<p>Xem hình sau để dễ hình dung nha các bạn</p>
+
+<p><img src="http://localhost:4000/assets/img/pygame_1/animchar.png" alt="Chuyển động của nhân vật" />
+<br />
+<br /></p>
+
+<p>Vậy là chúng ta đã thấy được 2 việc cần phải làm trong vòng lặp game đó <strong>“vẽ”</strong> và <strong>“thay đổi”</strong>. Còn một phần quan trọng nữa trong vòng lặp game, đó là <strong>“bắt sự kiện”</strong>. Hãy tìm hiểu về sự kiện ngay sau đây!
+<br />
+<br /></p>
+
+<h2 id="sự-kiện">Sự kiện</h2>
+
+<p>Sự kiện trong game là “một cái gì đó xảy ra” đối với game. Ví dụ như một cái “click chuột”, “ấn phím”… Vì vậy, sự kiện là một phần quan trọng trong game, nó giúp người chơi tương tác với những thứ trong game. Nếu không có những sự kiện này thì cái game chẳng khác gì một cái video.</p>
+
+<p>Nào, bây giờ thì nhìn lại đoạn code trong vòng lặp game:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">get</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">event</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="n">QUIT</span><span class="p">:</span>
+        <span class="n">pygame</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>
+        <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Đoạn code trên có tác dụng: Khi click vào nút X thì đóng của sổ game.
+Nhìn có vẻ hơi rối, nhưng hãy bình tĩnh, phân tích từ từ nào. Đoạn code này được chạy liên tục trong vòng lặp game. Ở vòng <code class="language-plaintext highlighter-rouge">for</code>, biến <code class="language-plaintext highlighter-rouge">event</code> sẽ lặp qua các sự kiện có trong <code class="language-plaintext highlighter-rouge">pygame.event.get()</code>. Bên trong vòng lặp <code class="language-plaintext highlighter-rouge">for</code>, biến <code class="language-plaintext highlighter-rouge">event</code> được kiểm tra xem có phải là sự kiện <code class="language-plaintext highlighter-rouge">QUIT</code> hay không, nếu đúng thì tắt cửa sổ game và chương trình.</p>
+
+<p>Quay lại ví dụ về nhân vật, nếu nhân vật chỉ chuyển động như vậy thì nó không phải là game, chúng ta cần phải điều khiển được nhân vật. Giả sử mình muốn cho nhân vật “nhảy lên” khi “click chuột” thì mình phải bắt được sự kiện “click chuột”, sau đó viết code để xử lý việc “nhảy lên”.</p>
+
+<p>Phần sự kiện này rất quan trọng, mình sẽ có một phần riêng để nói về cái này.</p>
+
+<p>Vậy là chúng ta đã tìm hiểu được cơ bản về vòng lặp game. <strong>Tóm lại</strong>, trong vòng lặp game có 3 việc chính: vẽ, bắt sự kiện, thay đổi đối tượng.</p>
+
+<p><img src="http://localhost:4000/assets/img/pygame_1/gameloop.png" alt="Vòng lặp game" /></p>
+
+<blockquote>
+  <p>Những cái này có thể hơi khó hiểu với các bạn lần đầu học lập trình game. Đừng quá lo lắng, các bạn có thể đọc lại nhiều lần, tìm hiểu thêm ở nhiều nguồn khác nhau, hoặc làm nhiều rồi sẽ quen thôi!</p>
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="vẽ-thử-vài-thứ-lên-cửa-sổ">Vẽ thử vài thứ lên cửa sổ</h2>
+
+<p>Đáng lẽ ra bài viết đã kết thúc rồi, nhưng mình thấy chúng ta chưa có được thành quả gì, chỉ là một cái cửa sổ trống. Nên mình sẽ thêm một vài dòng code để vẽ vài thứ lên cửa sổ, cho có thêm hứng thú ấy mà.</p>
+
+<p>Các bạn thêm vào vòng lặp game một vài dòng code nha!</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">pygame</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>
+            <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">()</span>
+    
+    <span class="n">DISPLAYSURF</span><span class="p">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pygame</span><span class="p">.</span><span class="n">draw</span><span class="p">.</span><span class="n">rect</span><span class="p">(</span><span class="n">DISPLAYSURF</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+    <span class="n">pygame</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">update</span><span class="p">()</span>
+</code></pre></div></div>
+<p><br />
+Đây là kết quả:</p>
+
+<p><img src="http://localhost:4000/assets/img/pygame_1/draw.png" alt="Vẽ vài thứ" /></p>
+
+<p>Vậy là chúng ta đã vẽ được một hình chữ nhật đỏ trên nền trắng rồi. Còn về phần những đoạn code đó thì mình sẽ giải thích ở bài hướng dẫn tiếp theo.
+<br />
+<br /></p>
+<h2 id="tổng-kết">Tổng kết</h2>
+
+<p>Vậy là bài hướng dẫn này đã kết thúc. Xem lại chúng ta đã làm được gì nào!</p>
+<ul>
+  <li>Cài đặt pygame</li>
+  <li>Tạo một cửa sổ</li>
+  <li>Tìm hiểu về vòng lặp game, cách tạo chuyển động trong game, sự kiện</li>
+  <li>Vẽ được cái gì đó lên cửa sổ game</li>
+</ul>
+
+<p>Cảm ơn các bạn đã theo dõi! Hẹn gặp lại ở những bài hướng dẫn tiếp theo.</p>
+:ET
