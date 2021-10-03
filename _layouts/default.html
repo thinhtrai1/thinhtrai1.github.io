@@ -12,32 +12,26 @@
 	<script src="https://kit.fontawesome.com/6aa8c5054e.js" crossorigin="anonymous"></script>
 	<title>{{page.title}}</title>
 	<style type="text/css">
-		.fixscroll {
-			position: fixed;
-			z-index: 10000;
-			color: red;
-			top: 0;
-			right: 0;
-			left: 0;
-			bottom: 0;
+		#fixscroll {
 			background: red;
-			visibility: hidden;
 			transition: .5s;
 		}
-		.fixscroll:hover {
-			transform: translateY(1px);
+		#fixscroll:hover {
+			transform: translateY(3px);
 		}
 	</style>
 </head>
-<body>
+<body onload="fixscroll()">
 	{% include header.html %}
 	{{ content }}
 	{% include footer.html %}
 	<a href="#" class="m-btn btn-to-top"><i class="fas fa-angle-up fa-2x"></i></a>
-	<div class="fixscroll">
+	<div id="fixscroll">
+		fix
 	</div>
 	<script src="{{site.url}}/assets/js/main.js"></script>
 	<script type="text/javascript">
+		
 	</script>
 </body>
 </html>
