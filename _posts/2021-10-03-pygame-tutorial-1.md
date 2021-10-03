@@ -63,7 +63,7 @@ while True:
 <br>
 Sau khi chạy đoạn code, bạn sẽ có được kết quả như hình. Nếu có lỗi thì bạn kiểm tra xem có cài pygame thành công chưa nha!
 
-![Kết quả chạy đoạn code trên]({{site.url}}/assets/img/pygame_1/helloworld.png)
+![Kết quả chạy đoạn code trên]({{site.url}}/assets/img/pygame_1/helloworld.PNG)
 <br><br>
 
 Giờ chúng ta tìm hiểu những dòng code thôi nào!
