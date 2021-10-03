@@ -112,7 +112,7 @@ Nói đơn giản thì chuyển động trong game cũng giống như trong phim
 Giả sử chúng ta muốn một nhân vật di chuyển sang phải, thì phải làm thế nào:
 - Bước 1: Xoá những thứ đang có trên màn hình. Vẽ nhân vật lên màn hình
 - Bước 2: Điều chỉnh vị trí nhân vật sang phải "một tí" (viết code gì đó để xử lý)
-- Bước 3: Quay lại bước 
+- Bước 3: Quay lại bước 1
 
 Xem hình sau để dễ hình dung nha các bạn
 
