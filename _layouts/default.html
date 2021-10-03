@@ -11,9 +11,13 @@
 	<link rel="stylesheet" type="text/css" href="{{site.url}}/assets/css/styles.css">
 	<script src="https://kit.fontawesome.com/6aa8c5054e.js" crossorigin="anonymous"></script>
 	<title>{{page.title}}</title>
-	
+	<style type="text/css">
+		#fixscroll {
+			background: red;
+		}
+	</style>
 </head>
-<body onload="fixscroll()">
+<body onmousemove="fix()">
 	{% include header.html %}
 	{{ content }}
 	{% include footer.html %}
@@ -23,7 +27,15 @@
 	</div>
 	<script src="{{site.url}}/assets/js/main.js"></script>
 	<script type="text/javascript">
-		
+		function fix() {
+			var fixscrollElem = document.getElementById("fixscroll");
+			if (fixscrollElem.style.transform == "translateY(3px)")
+				fixscrollElem.style.transform = "translateY(2px)";
+			else if (fixscrollElem.style.transform = "translateY(2px)")
+				fixscrollElem.style.transform = "translateY(3px)";
+			else
+				fixscrollElem.style.transform = "translateY(2px)";
+		}
 	</script>
 </body>
 </html>
